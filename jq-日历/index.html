@@ -22,7 +22,10 @@
             api = $this.calendar({
               time: time === 'no' ? false : true,
               zIndex: 99999,
-              size: time === 'no' ? 3 : len
+              size: time === 'no' ? 3 : len,
+              dateClick: function (date) {
+                console.log(date)
+              }
             });
             setTimeout(function () {
               api.open();
